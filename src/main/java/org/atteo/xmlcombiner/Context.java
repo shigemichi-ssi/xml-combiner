@@ -18,6 +18,7 @@ package org.atteo.xmlcombiner;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -34,6 +35,7 @@ class Context {
 	private Element element;
 
 	public Context() {
+            // Not sure why this empty default constructor was written when there are no other constructors.
 	}
 
 	public static Context fromElement(Element element) {
@@ -100,5 +102,22 @@ class Context {
 	@Override
 	public String toString() {
 		return "[" + neighbours + ", " + element + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(element, neighbours);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Context other = (Context) obj;
+		return Objects.equals(element, other.element) && Objects.equals(neighbours, other.neighbours);
 	}
 }
