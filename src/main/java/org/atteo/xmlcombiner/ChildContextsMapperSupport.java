@@ -33,6 +33,6 @@ public abstract class ChildContextsMapperSupport implements ChildContextsMapper 
             }
         }
         return map;
-    };
+    }
 
 }
