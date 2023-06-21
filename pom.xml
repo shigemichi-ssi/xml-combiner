@@ -28,10 +28,10 @@
 
   <properties>
     <jacoco.version>0.8.7</jacoco.version>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+<!--    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
     <sonar.organization>shigemichi-ssi</sonar.organization>
-    <sonar.projectKey>shigemichi-ssi_xml-combiner</sonar.projectKey>
+    <sonar.projectKey>shigemichi-ssi_xml-combiner</sonar.projectKey> -->
   </properties>
   <dependencies>
     <dependency>
